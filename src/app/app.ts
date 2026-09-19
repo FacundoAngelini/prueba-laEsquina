@@ -1,15 +1,14 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Header } from "./header/header";
-import { Aside } from "./aside/aside";
-import {Footer} from "./footer/footer";
+import { Aside } from './shared/aside/aside';
+import { Footer } from './shared/footer/footer';
+import { Header } from './shared/header/header';
+
 
 @Component({
-  imports: [Header, Aside, Footer, RouterOutlet],
+  imports: [RouterOutlet, Header, Footer, Aside],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
-export class App {
-  protected readonly title = signal('angular-intro');
-}
+export class App {}

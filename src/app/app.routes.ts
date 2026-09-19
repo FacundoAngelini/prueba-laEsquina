@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { Inicio } from './inicio/inicio';
-import { Productos } from './productos/productos';
+import { Inicio } from './shared/inicio/inicio';
+import { Productos } from './products/productos';
 
 
 
