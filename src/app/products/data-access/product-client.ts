@@ -5,7 +5,7 @@ import { Product, ProductFormModel } from './product';
 @Service()
 export class ProductClient {
   private readonly http = inject(HttpClient);
-  private readonly baseUrl = 'http://localhost:3000/products';
+  private readonly baseUrl = 'http://localhost:3000/productos';
 
   getAllProducts() {
     return this.http.get<Product[]>(this.baseUrl);

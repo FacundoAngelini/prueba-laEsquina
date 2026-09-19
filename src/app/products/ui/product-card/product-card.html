@@ -1,12 +1,13 @@
 @let product = this.product();
 
 <article>
-  <p>{{ product.category }}</p>
-  <h2>{{ product.name }}</h2>
-  <p>{{ product.description }}</p>
-  <p>$ {{ product.price }}</p>
+  <span class="category">{{ product.category }}</span>
+  <h3>{{ product.name }}</h3>
+  <p class="description">{{ product.description }}</p>
+  <p class="price">$ {{ product.price }}</p>
+
   <div class="buttons">
-    <button (click)="navigationSelected.emit(product.id)">Ver detalles</button>
-    <button (click)="productDeleted.emit(product.id)">Borrar</button>
+    <a class="btn-details" [routerLink]="['/productos', product.id]">Ver detalles</a>
+    <button type="button" class="btn-delete" (click)="productDeleted.emit(product.id)">Borrar</button>
   </div>
 </article>

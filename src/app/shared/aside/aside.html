@@ -2,10 +2,10 @@
   <nav>
     <h3 class="aside-title">Menú</h3>
     <ul>
-      <li><a routerLink="/inicio" fragment="productos">Productos</a></li>
-      <li><a routerLink="/inicio" fragment="destacados">Destacado</a></li>
-      <li><a routerLink="/inicio" fragment="ofertas">Oferta</a></li>
-      <li><a routerLink="/inicio" fragment="contacto">Contacto</a></li>
+      <li><a href="/inicio" (click)="goTo($event, 'productos')">Productos</a></li>
+      <li><a href="/inicio" (click)="goTo($event, 'destacados')">Destacado</a></li>
+      <li><a href="/inicio" (click)="goTo($event, 'ofertas')">Oferta</a></li>
+      <li><a href="/inicio" (click)="goTo($event, 'contacto')">Contacto</a></li>
     </ul>
   </nav>
 </div>

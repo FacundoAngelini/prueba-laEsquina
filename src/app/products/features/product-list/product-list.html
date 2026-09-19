@@ -1,15 +1,18 @@
 @let products = this.products();
 
+<h2>Productos</h2>
+
 @if (isLoaing()) {
   <p>Cargando productos...</p>
 } @else {
-  @for (product of products; track product.id) {
-    <app-product-card
-      [product]="product"
-      (productDeleted)="deleteProduct($event)"
-      (navigationSelected)="navigateToDetails($event)"
-    ></app-product-card>
-  } @empty {
-    <p>No hay productos cargados...</p>
-  }
+  <div class="product-grid">
+    @for (product of products; track product.id) {
+      <app-product-card
+        [product]="product"
+        (productDeleted)="deleteProduct($event)"
+      ></app-product-card>
+    } @empty {
+      <p>No hay productos cargados...</p>
+    }
+  </div>
 }
