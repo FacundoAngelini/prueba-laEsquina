@@ -1,0 +1,84 @@
+.header{
+    display: flex; /* acomda la imagen y los nav uno al lado de otro, no debajo*/
+    align-items: center; /*mide los elemenos de foma y los poner ne el centro, ya que el boton y elnav no miden lo mismo*/
+    padding: 1rem 2rem; /*1 rem arriba y abajo, 2 rem a los lados*/
+    background-color: #060457;
+    width: 100%; /*ocupa todo el ancho de la pantalla*/
+    gap: 2rem;
+}  
+
+.Logo{
+    display:flex; /* acomoda la imagen y el texto uno al lado del otro, no debajo*/
+    align-items: center; /*mide los elemenos de foma y los poner ne el centro, ya que el boton y elnav no miden lo mismo*/
+    gap:12px; /*espacio entre la imagen y el texto, sin usar margin*/
+}
+
+.Logo img{
+   height: 80px; /* fija la altura de la imagen en 80px, sin impotar dispositivo*/
+   width: auto; /* fija el ancho de la imagen automaticamente, depende lo que necesite*/
+   border-radius: 116px 111px 91px 94px; /*redondea la imagen en forma de circulo*/
+}
+
+.logo-text{
+color:#fff; /*cambia el color del texto a blanco*/
+font-size: 1.3rem; /*cambia el tamaño del texto a 1.5 rem*/
+font-weight: 600; /*cambia el grosor del texto a 600, ni fino ni negrita completa*/
+}
+
+.header nav{
+    grid-column: 2;
+    justify-self: start; /*centra el nav en el header, ya que el header es mas grande que el nav*/
+}
+
+nav ul{
+    display: flex; /* acomoda los li uno al lado del otro, no debajo*/
+    gap: 24px; /*espacio entre los li, sin usar margin*/
+    list-style: none; /*quita los puntos de los ul que trae por defecto */
+}
+
+nav a{
+    text-decoration: none; /*quita el subrayado de los links*/
+    color: #fff; /*cambia el color del texto de los links*/
+    font-weight: 500; /*grosor d ela leyra intermedio, ni fino ni negrita completa*/
+}
+
+.btn-login{
+    padding: 10px 20px; /*10px arriba y abajo, 20px a los lados*/
+    margin-left: auto;
+    border: none; /*quita el borde del boton*/
+    border-radius: 6px; /*redondea las esquinas del boton*/
+    background-color: #e9aa35; /*cambia el color de fondo del boton*/
+    color:#fff; /*color del texto en blanco*/
+    cursor: pointer; /*cambia el cursor a una mano cuando se pasa por encima del boton*/
+    transition: background-color 0.2s; /*cambia el color de fondo del boton en 0.3 segundos cuando se pasa por encima*/
+}
+
+.btn-login:hover{
+    background-color: #e6c836; /*cambia el color de fondo del boton cuando se pasa por encima*/
+}
+
+
+@media(max-width: 600px){ /*cuando la pantalla sea menor a 600px, aplica los estilos de abajo*/
+    .header{
+        flex-direction: column; /* acomoda la imagen, el nav y el boton uno debajo del otro*/
+        align-items: flex-start; /*alinea los elementos a la izquierda*/
+        gap:1rem; /*espacio entre los elementos, sin usar margin*/
+    }
+
+    nav ul{
+        flex-wrap: wrap; /* acomoda los li uno debajo del otro*/
+        gap: 12px; /*espacio entre los li, sin usar margin*/
+    }
+
+    .btn-login{
+        width: 100%; /*centra el boton en la pantalla, ocupa todo el ancho*/
+    }
+
+    .Logo img{
+        height: 60px; /* fija la altura mas chica*/
+    }
+
+    .logo-text{
+        font-size: 1.1rem; /*cambia el tamaño del texto a 1 rem*/
+    }
+}

@@ -1,0 +1,34 @@
+.aside{
+    padding: 1.5rem 1rem; /*1.5 rem arriba y abajo, 2 rem a los lados*/
+    background-color: #e6dfc6; /*cambia el color de fondo del aside*/
+    height: 100%;
+}
+
+.aside-title{
+font-size: 0.85rem; /*para que se vea una etiqueta discreta, no protagonista*/
+text-transform: uppercase; /*cambia el texto a mayusculas*/
+letter-spacing: 0.5px; /*espacio entre las letras*/
+color: #555;
+margin-bottom: 1rem; /*espacio entre el titulo y los links*/
+}
+
+.aside ul{
+    list-style: none; /*quita los puntos de los ul que trae por defecto */
+}
+
+.aside li{
+    margin-bottom: 4px; /*espacio entre los li, sin usar padding*/
+}
+
+.aside a{
+    display:block; /*para que el link ocupe todo el ancho del li y se pueda hacer click en cualquier parte*/
+    padding: 10px 12px; /*10px arriba y abajo, 12px a los lados*/
+    text-decoration: none; /*quita el subrayado de los links*/
+    color: #333;
+    border-radius: 4px; /*redondea las esquinas del link*/
+    transition: background-color 0.2s; /*cambia el color de fondo del link en 0.2 segundos cuando se pasa por encima*/
+}
+
+.aside a:hover{
+    background-color: rgba(0, 0, 0, 0.05); /*cambia el color de fondo del link cuando se pasa por encima*/
+}

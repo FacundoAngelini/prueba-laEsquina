@@ -1,0 +1,88 @@
+:host{
+    display:block;
+    height: 100%;
+}
+
+.main{
+    height: 100%;
+    padding: 2rem;
+    overflow-y: auto;  /* ESTE es el único que genera scroll */
+    overflow-x: hidden; /*si el contenido es mas alto que el espacio que tiene, lo hace scroleable*/
+    background-color: #f1f0e5e4;
+}
+
+.main section{
+    margin-bottom: 3rem;
+}
+
+.main section:last-child{
+    margin-bottom: 0;
+} /*a la ultima seccion no le hace ese margin de mas*/
+
+.main h2{
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.main > section >p{
+    color:#666;
+    margin-bottom: 1.5rem;
+}
+
+.producto-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*quiero 2 columnas con el mismo tamaño*/
+    gap: 2rem;  /*separacion horizontal y vertical*/
+}
+
+.producto-card{
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(21, 20, 20);  
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /*agrega sombra sutil al contenedor*/
+}
+
+.producto-card .categoria{
+   display: block;/*que ocupe toda la linea y el los textos demas van abajo de esto*/
+   font-size: 0.75rem;
+   font-weight: 600;
+   text-transform: uppercase;
+   color: #c17a2e;
+   margin-bottom: 4px;
+}
+
+.producto-card h3{
+    color: #0505b7;
+    margin-bottom: 0.5rem;
+}
+
+.producto-card p{
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.producto-card .precio{
+  display: block;
+  font-weight: 700;
+  color: #c17a2e;
+}
+
+
+.btn-ver-mas {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #0b0952; /* El azul oscuro de Chiqui Aura */
+  color: white;
+  text-decoration: none; /* Le saca el subrayado horrible del <a> */
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px){
+    .productos-grid{
+        grid-template-columns: 1fr; /*una sola columna*/
+    }
+}
