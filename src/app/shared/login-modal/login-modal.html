@@ -1,24 +1,23 @@
 <dialog #modalRef class="modal-login" (cancel)="(false)">
-<header class="modal-header">
+  <header class="modal-header">
     <h2>Iniciar Sesión</h2>
     <p>Ingresa a tu cuenta</p>
-</header>
+  </header>
 
-<section class="modal-body">
-<div class="form-group">
-    <label for="email">Correo electronico</label>
-    <input type="email", id="email", placeholder="usuario@gmail.com">
-</div>
+  <section class="modal-body">
+    <div class="form-group">
+      <label for="email">Correo electronico</label>
+      <input type="email" id="email" placeholder="usuario@gmail.com">
+    </div>
 
-<div class="form-group">
-    <label for="password">Contraseña</label>
-    <input type="password", id="password", placeholder="...........">
+    <div class="form-group">
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" placeholder="...........">
+    </div>
+  </section>
 
-</div>
-</section>
-
-<footer class="modal-footer">
-<button type="button" class="btn-cancel" (click)="close(false)">Cancelar</button>
-<button tyoe="button" class="brn-submit" (click)="close(true)">Ingresar</button>
-</footer>
+  <footer class="modal-footer">
+    <button type="button" class="btn-cancel" (click)="close(false)">Cancelar</button>
+    <button type="button" class="btn-submit" (click)="close(true)">Ingresar</button>
+  </footer>
 </dialog>

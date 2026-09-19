@@ -56,7 +56,15 @@ nav a{
 .btn-login:hover{
     background-color: #e6c836; /*cambia el color de fondo del boton cuando se pasa por encima*/
 }
+nav a:hover{
+    color: #e9aa35; /*resalta el link al pasar el mouse*/
+}
 
+nav a.active-link{
+    color: #e9aa35; /*marca la pagina actual, la clase la agrega routerLinkActive*/
+    border-bottom: 2px solid #e9aa35;
+    padding-bottom: 2px;
+}
 
 @media(max-width: 600px){ /*cuando la pantalla sea menor a 600px, aplica los estilos de abajo*/
     .header{
