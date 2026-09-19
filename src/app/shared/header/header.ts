@@ -1,9 +1,9 @@
 import { Component, signal } from '@angular/core';
 import { LoginModel } from '../login-modal/login-modal';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  imports: [LoginModel, RouterLink],
+  imports: [LoginModel, RouterLink,RouterLinkActive],
   selector: 'header',
   styleUrl: './header.css',
   templateUrl: './header.html',
@@ -17,3 +17,5 @@ export class Header {
     this.isLoginModelOpen.set(false);
   }
 }
+
+export class header {}

@@ -1,11 +1,24 @@
 import { Routes } from '@angular/router';
-import { Inicio } from './shared/inicio/inicio';
-import { Productos } from './products/productos';
-
-
 
 export const routes: Routes = [
-    {path: 'inicio', component: Inicio},
-    { path: '', redirectTo: '/inicio', pathMatch: 'full' },
-    { path: '**', redirectTo: '/inicio' }
+{
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'inicio',
+},
+{
+    path: 'inicio',
+    loadComponent: () => import('./inicio/inicio'),//apunta a la carpeta donde se encuentra el componente
+},
+{
+    path: 'productos',
+    loadComponent: () => import('./products/ui/product-layout/product-layout'), //el layouyt,
+    loadChildren: () => import('./products/product.routes'), //rutas hias
+},
+{
+    path: '**',
+    redirectTo: 'inicio',
+  },
 ];
+
+export const appRoutes: Routes = [ ]

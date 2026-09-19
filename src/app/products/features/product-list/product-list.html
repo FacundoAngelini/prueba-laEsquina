@@ -1,1 +1,15 @@
-<p>product-list works!</p>
+@let products = this.products();
+
+@if (isLoaing()) {
+  <p>Cargando productos...</p>
+} @else {
+  @for (product of products; track product.id) {
+    <app-product-card
+      [product]="product"
+      (productDeleted)="deleteProduct($event)"
+      (navigationSelected)="navigateToDetails($event)"
+    ></app-product-card>
+  } @empty {
+    <p>No hay productos cargados...</p>
+  }
+}
